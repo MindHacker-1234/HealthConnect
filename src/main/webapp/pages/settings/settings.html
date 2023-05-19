@@ -1,0 +1,80 @@
+<wm-page pagetitle="Settings" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-layoutgrid name="layoutgrid3">
+                <wm-gridrow name="gridrow10">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn14">
+                        <wm-container name="container2" horizontalalign="center">
+                            <wm-picture resizemode="contain" name="picture2" picturesource="bind:Variables.LoggedGetbyemail.dataSet.picture" class="profilepic"></wm-picture>
+                        </wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow11">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn16">
+                        <wm-form errormessage="" captionposition="top" title="Edit user details" enctype="application/x-www-form-urlencoded" method="put" dataset="bind:Variables.Health_connectEditPatients.dataSet" captionalign="left" name="editPatientsForm1"
+                            iconclass="wi wi-edit">
+                            <wm-layoutgrid columns="3" name="layoutgrid4">
+                                <wm-gridrow name="gridrow13">
+                                    <wm-composite name="composite2"></wm-composite>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow14">
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn18">
+                                        <wm-form-field name="Patients_firstName" readonly="false" displayname="First Name" key="Patients.firstName" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.LoggedGetbyemail.dataSet.firstName"></wm-form-field>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn19">
+                                        <wm-form-field name="Patients_lastName" readonly="false" displayname="Last Name" key="Patients.lastName" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.LoggedGetbyemail.dataSet.lastName"></wm-form-field>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn20">
+                                        <wm-form-field name="Patients_dateOfBirth" readonly="false" displayname="Date Of Birth" key="Patients.dateOfBirth" type="date" show="true" widget="date" datepattern="MMM d, y" placeholder="Select date" defaultvalue="bind:Variables.LoggedGetbyemail.dataSet.dateOfBirth"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow15">
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn21">
+                                        <wm-form-field name="Patients_gender" readonly="false" displayname="Gender" key="Patients.gender" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.LoggedGetbyemail.dataSet.gender"></wm-form-field>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn22">
+                                        <wm-form-field name="Patients_addressLine" readonly="false" displayname="Address Line" key="Patients.addressLine" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.LoggedGetbyemail.dataSet.addressLine"></wm-form-field>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn23">
+                                        <wm-form-field name="Patients_city" readonly="false" displayname="City" key="Patients.city" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.LoggedGetbyemail.dataSet.city"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow16">
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn24">
+                                        <wm-form-field name="Patients_state" readonly="false" displayname="State" key="Patients.state" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.LoggedGetbyemail.dataSet.state"></wm-form-field>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn25">
+                                        <wm-form-field name="Patients_country" readonly="false" displayname="Country" key="Patients.country" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.LoggedGetbyemail.dataSet.country"></wm-form-field>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn26">
+                                        <wm-form-field name="Patients_phoneNumber" readonly="false" displayname="Phone Number" key="Patients.phoneNumber" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.LoggedGetbyemail.dataSet.phoneNumber"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow17">
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn27">
+                                        <wm-form-field name="Patients_email" readonly="false" displayname="Email" key="Patients.email" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.LoggedGetbyemail.dataSet.email"></wm-form-field>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn28">
+                                        <wm-form-field name="Patients_password" readonly="false" displayname="Password" key="Patients.password" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.LoggedGetbyemail.dataSet.password"></wm-form-field>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn29">
+                                        <wm-form-field name="Patients_zipCode" readonly="false" displayname="Zip Code" key="Patients.zipCode" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.LoggedGetbyemail.dataSet.zipCode"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow1">
+                                    <wm-gridcolumn name="gridcolumn1" columnwidth="4">
+                                        <wm-form-field name="Patients_id" key="Patients.id" type="integer" displayname="Id" widget="number" show="false"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                            <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-default" iconclass="wi wi-refresh" title="Reset" disabled="false" widget-type="button" type="reset" update-mode="true"></wm-form-action>
+                            <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+                        </wm-form>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

@@ -1,0 +1,63 @@
+<wm-partial name="header" type="header">
+    <wm-layoutgrid name="headerlayout">
+        <wm-gridrow name="headerrow">
+            <wm-gridcolumn name="headerleft" verticalalign="middle" columnwidth="12">
+                <wm-layoutgrid name="layoutgrid2">
+                    <wm-gridrow name="gridrow2">
+                        <wm-gridcolumn columnwidth="2" name="gridcolumn3" horizontalalign="center">
+                            <wm-picture resizemode="cover" name="picture2" picturesource="resources/images/imagelists/logo__2_.png"></wm-picture>
+                            <wm-label padding="1.75em unset unset unset" name="label1" caption="HealthConnect Pro" fontsize="14" class="logo-caption"></wm-label>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="7" name="gridcolumn7">
+                            <wm-nav type="pills" autoclose="outsideClick" name="nav1" horizontalalign="left" margin="unset unset unset 10px">
+                                <wm-nav-item name="nav_item1"></wm-nav-item>
+                                <wm-nav-item name="nav_item2"></wm-nav-item>
+                                <wm-nav-item name="nav_item3"></wm-nav-item>
+                                <wm-nav-item name="nav_item7">
+                                    <wm-anchor margin="23px unset 0px 10px" name="anchor5" iconclass="wi wi-home" caption="Home" padding="0px unset" on-click="Actions.goToPage_Main.invoke()"></wm-anchor>
+                                    <wm-label name="label2" caption="search for hospitals" textalign="center" margin="0px unset 0px 47px" fontsize="10" padding="unset unset 0px unset" on-click="Actions.goToPage_Main.invoke()">search</wm-label>
+                                </wm-nav-item>
+                                <wm-nav-item name="nav_item8">
+                                    <wm-anchor margin="23px unset 0px 10px" name="anchor6" iconclass="wi wi-schedule" caption="Appointment Scheduler" padding="0px unset" on-click="Actions.goToPage_AppointmentScheduler.invoke()"></wm-anchor>
+                                    <wm-label name="label2" caption="Book a doctor" textalign="center" margin="0px unset 0px 50px" fontsize="10" padding="unset unset 0px unset" on-click="Actions.goToPage_AppointmentScheduler.invoke()">Book</wm-label>
+                                </wm-nav-item>
+                                <wm-nav-item name="nav_item9">
+                                    <wm-anchor margin="23px unset 0px 10px" name="anchor7" iconclass="wi wi-track-changes" caption="Symptom Tracker" padding="0px unset" on-click="Actions.goToPage_SymptomTracker.invoke()"></wm-anchor>
+                                    <wm-label name="label2" caption="Track your symptoms" textalign="center" margin="0px unset 0px 49px" fontsize="10" padding="unset unset 0px unset">Track</wm-label>
+                                </wm-nav-item>
+                                <wm-nav-item name="nav_item23"></wm-nav-item>
+                                <wm-nav-item name="nav_item10">
+                                    <wm-anchor margin="23px unset 0px 10px" name="anchor8" iconclass="wm-sl-r sl-medical-bag" caption="Medications" padding="0px unset" on-click="Actions.goToPage_Medications.invoke()"></wm-anchor>
+                                    <wm-label name="label2" caption="Check your Medications" textalign="center" margin="0px unset 0px 49px" fontsize="10" padding="unset unset 0px unset">Med</wm-label>
+                                </wm-nav-item>
+                                <wm-nav-item name="nav_item21"></wm-nav-item>
+                                <wm-nav-item name="nav_item18"></wm-nav-item>
+                                <wm-nav-item name="nav_item16"></wm-nav-item>
+                                <wm-nav-item name="nav_item15"></wm-nav-item>
+                                <wm-nav-item name="nav_item11"></wm-nav-item>
+                                <wm-nav-item name="nav_item14"></wm-nav-item>
+                                <wm-nav-item name="nav_item15_1"></wm-nav-item>
+                                <wm-nav-item name="nav_item20"></wm-nav-item>
+                                <wm-nav-item name="nav_item19"></wm-nav-item>
+                                <wm-nav-item name="nav_item20_1"></wm-nav-item>
+                            </wm-nav>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="3" name="gridcolumn4">
+                            <wm-nav type="pills" autoclose="outsideClick" name="nav3">
+                                <wm-nav-item name="nav_item24"></wm-nav-item>
+                                <wm-nav-item name="nav_item25"></wm-nav-item>
+                                <wm-nav-item name="nav_item26">
+                                    <wm-anchor margin="11px unset unset unset" name="anchor10" iconclass="wi wi-settings" caption="settings" on-click="Actions.goToPage_settings.invoke()"></wm-anchor>
+                                </wm-nav-item>
+                                <wm-nav-item name="nav_item27">
+                                    <wm-anchor margin="11px unset unset unset" name="anchor11" iconclass="wi wi-sign-out" caption="Signout" on-click="Actions.logoutAction.invoke()"></wm-anchor>
+                                </wm-nav-item>
+                            </wm-nav>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow3"></wm-gridrow>
+                </wm-layoutgrid>
+            </wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+</wm-partial>

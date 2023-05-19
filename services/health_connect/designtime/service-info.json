@@ -1,0 +1,7 @@
+{
+  "id" : "health_connect",
+  "type" : "DataService",
+  "packageNames" : [ "com.healthconnect_pro.health_connect" ],
+  "title" : "health_connect",
+  "mockEnabled" : false
+}

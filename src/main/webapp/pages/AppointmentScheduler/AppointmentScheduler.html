@@ -1,0 +1,101 @@
+<wm-page pagetitle="Home" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1" backgroundsize="100%">
+            <wm-container name="container1">
+                <wm-label padding="unset 0.5em" name="label1" caption="Doctors available in this city" show="false"></wm-label>
+            </wm-container>
+            <wm-layoutgrid name="layoutgrid5">
+                <wm-gridrow name="gridrow9">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn13">
+                        <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Contact List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" datafield="All Fields" statehandler="URL" name="DoctorsList1" dataset="bind:Variables.DoctorsList.dataSet"
+                            navigation="None" on-click="DoctorsList1Click($event, widget)" selectfirstitem="true" padding="10px unset">
+                            <wm-listtemplate layout="inline" name="listtemplate1">
+                                <wm-container class="media-left" name="container5_1" horizontalalign="center">
+                                    <wm-picture name="Picture" shape="circle" picturesource="bind:Variables.DoctorsList.dataSet[$i].picture" class="media-object" resizemode="cover" pictureaspect="None" width="32pt" height="32pt"></wm-picture>
+                                </wm-container>
+                                <wm-container class="media-body" name="container6">
+                                    <wm-label class="p media-heading" name="Name" caption="bind:Variables.DoctorsList.dataSet[$i].fullName" fontunit="em" padding="unset unset unset 1.25em"></wm-label>
+                                    <wm-label class="p media-heading" caption="bind:Variables.DoctorsList.dataSet[$i].hospitals.hospitalName" fontunit="em" padding="unset unset unset 1.25em" name="label7" color="black"></wm-label>
+                                    <wm-label class="p media-heading" caption="bind:Variables.DoctorsList.dataSet[$i].hospitals.hospitalAddress" fontunit="em" padding="unset unset unset 1.25em" name="hospitalAddress" color="black"></wm-label>
+                                    <wm-label class="p media-heading" caption="bind:Variables.DoctorsList.dataSet[$i].departments.departmentName" fontunit="em" padding="unset unset unset 1.25em" name="label9" color="black"></wm-label>
+                                    <wm-button class="btn-basic" caption="Book an appointment" type="button" margin="unset 0.5em unset unset" name="button10" on-click="Widgets.dialog2.open()"></wm-button>
+                                </wm-container>
+                            </wm-listtemplate>
+                        </wm-list>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn9"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn11">
+                        <wm-prefab prefabname="googlemaps" name="googlemaps1" locations="bind:Variables.rsLocation.dataSet.results[$i].geometry" lat="results[0].geometry.lat" lng="results[0].geometry.lng" markertype="LatLng" zoom="10"></wm-prefab>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow10"></wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Book an appointment" iconclass="wi wi-file-text" name="dialog2">
+        <wm-dialogactions name="dialogactions2">
+            <wm-button class="btn-primary" caption="Check" on-click="button3Click($event, widget)" name="button3" show="true"></wm-button>
+        </wm-dialogactions>
+        <wm-container name="container9">
+            <wm-container name="container10">
+                <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Action List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" statehandler="URL" name="DoctorsList1_1" dataset="bind:Variables.Health_connectDoctorsData.dataSet"
+                    navigation="None">
+                    <wm-listtemplate layout="inline" name="listtemplate2">
+                        <wm-container class="media-left" name="container6_1">
+                            <wm-picture width="32pt" height="32pt" name="Picture" shape="circle" picturesource="bind:Variables.Doctorsdetails.dataSet[$i].picture" class="media-object"></wm-picture>
+                        </wm-container>
+                        <wm-container class="media-body" padding="unset unset unset 1.25em" name="container7">
+                            <wm-label name="Name" class="p media-heading" caption="bind:Variables.Doctorsdetails.dataSet[$i].fullName" fontsize="1.143" fontunit="em"></wm-label>
+                            <wm-label name="JobTitle" caption="bind:Variables.Doctorsdetails.dataSet[$i].specialization" class="p text-muted" color="black"></wm-label>
+                            <wm-label caption="bind:Variables.Doctorsdetails.dataSet[$i].hospitals.hospitalDescription" class="p text-muted" name="label10_1" color="black"></wm-label>
+                        </wm-container>
+                        <wm-container class="media-right media-top" name="container8"></wm-container>
+                    </wm-listtemplate>
+                </wm-list>
+            </wm-container>
+        </wm-container>
+        <wm-liveform errormessage="" title="" iconclass="" defaultmode="Edit" dataset="bind:Variables.Health_connectAppointmentsData3.dataSet" captionalign="left" captionposition="top" name="AppointmentsLiveForm1" on-success="Actions.bookedaction.invoke()">
+            <wm-form-field name="id" displayname="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+            <wm-layoutgrid columns="2" name="layoutgrid2">
+                <wm-gridrow name="gridrow3">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn4">
+                        <wm-form-field name="appointmentDate" displayname="Appointment Date" show="true" primary-key="false" generator="assigned" key="appointmentDate" type="date" readonly="false" required="false" widget="date" datepattern="MMM d, y" placeholder="Select date"
+                            outputformat="yyyy-MM-dd" mindate="bind:Variables.svAppointments.dataSet[$i].doctors.doctorStartDate" maxdate="bind:Variables.svAppointments.dataSet[$i].doctors.endDate" validationmessage="select valid date"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn5">
+                        <wm-form-field name="timeslots" displayname="Timeslots" show="true" primary-key="false" generator="assigned" key="timeslots" type="list" is-related="true" readonly="false" required="false" widget="select" matchmode="startignorecase"
+                            dataset="bind:Variables.slots.dataSet" datafield="All Fields" displayfield="timeslot" placeholder="Select value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow4">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn6">
+                        <wm-form-field name="dayOfWeek" displayname="Day Of Week" show="false" primary-key="false" generator="assigned" key="dayOfWeek" type="string" readonly="false" required="false" widget="text" maxchars="255" inputtype="text" placeholder="Enter Value"
+                            defaultvalue="bind:day(Widgets.AppointmentsLiveForm1.formWidgets.appointmentDate.datavalue)"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn7">
+                        <wm-form-field name="appointmentStatus" displayname="Appointment Status" show="false" primary-key="false" generator="assigned" key="appointmentStatus" type="string" readonly="false" required="false" widget="text" maxchars="255" defaultvalue="pending"
+                            inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow5">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn8">
+                        <wm-form-field name="patients" displayname="Patients" show="false" primary-key="false" generator="assigned" key="patients" type="list" is-related="true" readonly="false" required="false" widget="select" matchmode="startignorecase"
+                            defaultvalue="bind:Variables.LoggedGetbyemail.dataSet" placeholder="Select value"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn9_1">
+                        <wm-form-field name="doctors" displayname="Doctors" show="false" primary-key="false" generator="assigned" key="doctors" type="list" is-related="true" readonly="false" required="false" widget="select" matchmode="startignorecase" defaultvalue="bind:Widgets.DoctorsList1.selecteditem"
+                            placeholder="Select value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-primary" iconclass="wi wi-refresh" title="Reset" action="reset()" disabled="false" widget-type="button" type="button" update-mode="true"></wm-form-action>
+            <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" action="" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+        </wm-liveform>
+        <wm-label padding="unset 0.5em" name="label8" caption="" show="false"></wm-label>
+        <wm-container name="container11" horizontalalign="center">
+            <wm-label padding="unset 0.5em" name="label10" caption="You have already booked an appointment with this doctor" show="false"></wm-label>
+        </wm-container>
+    </wm-dialog>
+</wm-page>

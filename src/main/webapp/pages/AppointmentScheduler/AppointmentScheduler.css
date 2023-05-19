@@ -1,0 +1,30 @@
+.app-container.media-left .app-picture.media-object.img-circle{
+    height: 61pt !important;
+    width: 50pt !important;
+}
+
+.wm-app .app-liveform .form-group .form-control-static + .app-input-wrapper > .form-control {
+    width: 80% !important;
+}
+
+.wm-app .app-liveform .form-group .form-control-static + .input-group {
+    width: 80% !important;
+}
+
+.wm-app .app-liveform .form-group .form-control-static + .app-select-wrapper {
+    width: 80% !important;
+}
+
+.wm-app .modal-dialog .app-liveform .panel-body {
+    padding-top: 10px;
+    padding-right: 10px;
+    margin-left: 20px;
+}
+
+.wm-app .app-livelist .app-list-item .media-heading {
+    font-family: poppins;
+}
+.wm-app .app-livelist .app-list-item .btn.app-button {
+    margin-left: 15em;
+}
+

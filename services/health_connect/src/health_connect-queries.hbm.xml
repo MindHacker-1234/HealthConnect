@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <sql-query name="updateAppointTimingsVariable">
+        <![CDATA[
+        update appointments set appointment_date=:date2,slot=:select1 where id=:id
+        ]]>
+    <query-param name="date2" type="java.sql.Date"/>
+    <query-param name="select1" type="java.lang.String"/>
+    <query-param name="id" type="java.lang.Integer"/>
+    </sql-query>
+</hibernate-mapping>

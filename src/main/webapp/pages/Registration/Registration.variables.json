@@ -1,0 +1,51 @@
+{
+  "FileServiceUploadFile1" : {
+    "_id" : "wm-FileServiceUploadFile1-wm.ServiceVariable-1684394547890",
+    "name" : "FileServiceUploadFile1",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "files",
+      "value" : "bind:Widgets.fileupload1.selectedFiles",
+      "type" : "java.lang.String"
+    } ],
+    "type" : "com.healthconnect_pro.fileservice.FileService.FileUploadResponse",
+    "service" : "FileService",
+    "operation" : "uploadFile",
+    "operationId" : "FileController_uploadFile",
+    "serviceType" : "JavaService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "File"
+  },
+  "Health_connectCreatePatients" : {
+    "_id" : "wm-Health_connectCreatePatients-wm.ServiceVariable-1684394364661",
+    "name" : "Health_connectCreatePatients",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.healthconnect_pro.health_connect.Patients",
+    "service" : "health_connect",
+    "operation" : "createPatients",
+    "operationId" : "PatientsController_createPatients",
+    "operationType" : "post",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "Patients"
+  }
+}

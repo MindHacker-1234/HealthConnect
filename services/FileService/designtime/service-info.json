@@ -1,0 +1,8 @@
+{
+  "id" : "FileService",
+  "type" : "JavaService",
+  "packageNames" : [ "com.healthconnect_pro.fileservice" ],
+  "serviceClassNames" : [ "com.healthconnect_pro.fileservice.FileService" ],
+  "title" : "FileService",
+  "mockEnabled" : false
+}

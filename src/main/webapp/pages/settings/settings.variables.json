@@ -1,0 +1,29 @@
+{
+  "Health_connectEditPatients" : {
+    "_id" : "wm-Health_connectEditPatients-wm.ServiceVariable-1684312954677",
+    "name" : "Health_connectEditPatients",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "id",
+      "value" : "bind:Variables.LoggedGetbyemail.dataSet.id",
+      "type" : "integer"
+    } ],
+    "type" : "com.healthconnect_pro.health_connect.Patients",
+    "service" : "health_connect",
+    "operation" : "editPatients",
+    "operationId" : "PatientsController_editPatients",
+    "operationType" : "put",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "Patients"
+  }
+}

@@ -1,0 +1,10 @@
+.heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.app-content-column {
+    background-color: #f7f8fa;
+     padding: 0em; 
+}

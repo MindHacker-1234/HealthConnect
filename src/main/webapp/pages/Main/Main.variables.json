@@ -1,0 +1,18 @@
+{
+  "banners" : {
+    "_id" : "wm-banners-wm.Variable-1682576494953",
+    "name" : "banners",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "dataValue" : "resources/images/imagelists/banner1.png"
+    }, {
+      "dataValue" : "resources/images/imagelists/banner2.png"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  }
+}

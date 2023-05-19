@@ -1,0 +1,49 @@
+{
+  "updateAppointTimingsVariable" : {
+    "name" : "updateAppointTimingsVariable",
+    "description" : "updateAppointTimingsVariable",
+    "version" : "V2",
+    "queryString" : "update appointments set appointment_date=:date2,slot=:select1 where id=:id",
+    "countQueryString" : null,
+    "offlineQueryString" : null,
+    "nativeSql" : true,
+    "fetchCount" : false,
+    "type" : "UPDATE",
+    "parameters" : [ {
+      "name" : "date2",
+      "type" : "date",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "2023-05-16",
+      "required" : true
+    }, {
+      "name" : "select1",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "9:30 AM",
+      "required" : true
+    }, {
+      "name" : "id",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : true
+    } ],
+    "request" : {
+      "wrapped" : true,
+      "typeRef" : "com.healthconnect_pro.health_connect.models.query.UpdateAppointTimingsVariableRequest",
+      "method" : "PUT"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "java.lang.Integer",
+      "returns" : "ENTITY",
+      "responseType" : "SINGLE"
+    }
+  }
+}

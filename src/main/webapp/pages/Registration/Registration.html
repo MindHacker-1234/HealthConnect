@@ -1,0 +1,71 @@
+<wm-page pagetitle="Registration" name="page1">
+    <wm-header content="header1" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-container name="container2" horizontalalign="right">
+                <wm-button class="btn-default" caption="Back" type="button" margin="unset 0.5em 1em 0.5em" name="button1" iconclass="wi wi-back" on-click="Actions.logoutAction.invoke()"></wm-button>
+            </wm-container>
+            <wm-container name="container2_1">
+                <wm-form errormessage="" captionposition="top" title="Registration Form" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.Health_connectCreatePatients.dataSet" captionalign="left" name="createPatientsForm2"
+                    iconclass="wi wi-create">
+                    <wm-layoutgrid columns="3" name="layoutgrid3">
+                        <wm-gridrow name="gridrow22">
+                            <wm-composite name="composite2"></wm-composite>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow23">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn29">
+                                <wm-form-field name="Patients_firstName" readonly="false" displayname="First Name" key="Patients.firstName" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" required="true" validationmessage="Please enter your first name"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn30">
+                                <wm-form-field name="Patients_lastName" readonly="false" displayname="Last Name" key="Patients.lastName" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn31">
+                                <wm-form-field name="Patients_dateOfBirth" readonly="false" displayname="Date Of Birth" key="Patients.dateOfBirth" type="date" show="true" widget="date" datepattern="MMM d, y" placeholder="Select date" required="true" validationmessage="Please enter your birth date"
+                                    mindate="1950-01-01" maxdate="CURRENT_DATE"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow24">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn32">
+                                <wm-form-field name="Patients_gender" readonly="false" displayname="Gender" key="Patients.gender" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" validationmessage="Please enter your gender"
+                                    required="true"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn33">
+                                <wm-form-field name="Patients_addressLine" readonly="false" displayname="Address Line" key="Patients.addressLine" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" required="true" validationmessage="please enter your address"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn34">
+                                <wm-form-field name="Patients_city" readonly="false" displayname="City" key="Patients.city" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow25">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn35">
+                                <wm-form-field name="Patients_state" readonly="false" displayname="State" key="Patients.state" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn36">
+                                <wm-form-field name="Patients_country" readonly="false" displayname="Country" key="Patients.country" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn37">
+                                <wm-form-field name="Patients_phoneNumber" readonly="false" displayname="Phone Number" key="Patients.phoneNumber" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" required="true" validationmessage="please enter your phone number"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow26">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn38">
+                                <wm-form-field name="Patients_email" readonly="false" displayname="Email" key="Patients.email" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" required="true" validationmessage="Please enter your email"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn39">
+                                <wm-form-field name="Patients_password" readonly="false" displayname="Password" key="Patients.password" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn40">
+                                <wm-label padding="unset 0.5em" name="label1" caption="Upload your photo"></wm-label>
+                                <wm-form-field name="Patients_picture" readonly="false" displayname="Picture" key="Patients.picture" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                                <wm-fileupload cleariconclass="wi wi-clear" cleariconhint="Clear" name="fileupload1" on-select="Variables.FileServiceUploadFile1.invoke()"></wm-fileupload>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-default" iconclass="wi wi-refresh" title="Reset" disabled="false" widget-type="button" type="reset" update-mode="true"></wm-form-action>
+                    <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+                </wm-form>
+            </wm-container>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

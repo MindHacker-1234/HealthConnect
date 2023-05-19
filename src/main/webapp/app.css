@@ -1,0 +1,50 @@
+.wm-app .app-livefilter input:focus.ng-valid {
+    border: 1px solid;
+}
+
+.wm-app .app-content .app-content-row .app-content-column {
+    background-color: aliceblue;
+}
+
+.wm-app .app-page-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.wm-app .input-group.app-search {
+    margin-top: 10px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid;
+    margin-left: 25%;
+}
+
+.wm-app .app-page-main {
+    width: 100%;
+}
+
+.form-control .app-textbox .ng-pristine .ng-valid .ng-touched {
+    width: 100%;
+}
+
+.wm-app .form-control {
+    border: 1px solid black;
+}
+
+.wm-app .form-control:active {
+    border: 1px solid black !important;
+}
+
+.wm-app .panel .panel-heading .panel-title .heading {
+    margin-left: 6.6px;
+}
+
+.text1 {
+    margin-right: 10%;
+}
+
+.row3 {
+    background-color: aquamarine;
+}
